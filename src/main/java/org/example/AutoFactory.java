@@ -28,9 +28,10 @@ public class AutoFactory {
         int i = 0;
         while (i<size){
             productionLine.work();
+            Car car = new Car();
             i++;
 
         }
-        System.out.printf("Produced %d count", i);
+        System.out.printf("Produced %d count", Car.getCarCount());
     }
 }
