@@ -9,4 +9,5 @@
     </bean>
 
     <bean id="sedanPL" class="org.example.SedanProductionLine"/>
+
 </beans>

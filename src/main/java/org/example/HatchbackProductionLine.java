@@ -10,6 +10,8 @@ public class HatchbackProductionLine implements ProductionLine{
     @Override
     public void work() {
 
+        Car.createCar();
+
         System.out.println("Hatchback produced!");
 
     }

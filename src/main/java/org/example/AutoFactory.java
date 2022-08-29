@@ -1,5 +1,13 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.stereotype.Component;
+
+/**
+ * Фабрика автомобилей.
+ */
+@Component
 public class AutoFactory {
 
     /**
@@ -27,11 +35,12 @@ public class AutoFactory {
     public void runProduct(){
         int i = 0;
         while (i<size){
+
             productionLine.work();
-            Car car = new Car();
+
             i++;
 
         }
-        System.out.printf("Produced %d count", Car.getCarCount());
+        System.out.printf("Produced %d count", Car.getCarsBuilt());
     }
 }

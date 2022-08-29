@@ -10,7 +10,10 @@ public class SedanProductionLine implements ProductionLine{
     @Override
     public void work() {
 
+        Car.createCar();
+
         System.out.println("Sedan produced!");
 
     }
+
 }
