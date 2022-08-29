@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="autoFactory" class="org.example.AutoFactory">
+        <constructor-arg index="0" value="4"/>
+        <constructor-arg index="1" ref="sedanPL"/>
+    </bean>
+
+    <bean id="sedanPL" class="org.example.SedanProductionLine"/>
+</beans>
