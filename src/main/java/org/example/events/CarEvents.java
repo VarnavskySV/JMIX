@@ -15,9 +15,11 @@ public class CarEvents extends ApplicationEvent {
      * Конструктор.
      * @param source - объект.
      */
-    public CarEvents(Object source) {
+    public CarEvents(Object source, String message) {
         super(source);
+        this.message = message;
     }
+
 
     /**
      * Получить сообщеие.

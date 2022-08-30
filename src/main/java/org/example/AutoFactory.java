@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.events.CarEventPublisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class AutoFactory {
+
 
     /**
      * Размерность производства.

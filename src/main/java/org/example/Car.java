@@ -30,13 +30,6 @@ public class Car {
     }
 
     /**
-     * Bean публикатор.
-     */
-    @Autowired
-    private CarEventPublisher carEventPublisher;
-
-
-    /**
      * Для случайного заполнения.
      */
     boolean partsDelivered = false;
@@ -74,27 +67,18 @@ public class Car {
             cnt++;
             setCarsBuilt(cnt);
 
-            createPublish();
-
         }
     }
 
     /**
-     *  Установить сообщение.
-     */
-    public void createPublish(){
-
-        //carEventPublisher.publishCarEvent("New car created.");
-
-    }
-    /**
      * Создает сам себя и ставит поле partsDelivered.
      */
-    static void createCar(){
+    static Car createCar(){
         Car car = new Car();
         if (Car.randomBoolean()){
             car.setPartsDelivered(true);
 
         }
+        return car;
     }
 }

@@ -23,7 +23,7 @@ public class CarEventPublisher {
 
         System.out.println("message : "+ message);
 
-        applicationEventPublisher.publishEvent(new CarEvents(this));
+        applicationEventPublisher.publishEvent(new CarEvents(this, message));
         
     }
 }
