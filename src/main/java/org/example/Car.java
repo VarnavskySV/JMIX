@@ -2,12 +2,10 @@ package org.example;
 
 import org.example.events.CarEventPublisher;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 /**
  *  Класс автомобиль.
  */
-@Component
 public class Car {
 
     /**

@@ -2,7 +2,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-
+    <!--context:component-scan base-package="org.example" /-->
     <bean id="autoFactory" class="org.example.AutoFactory">
         <constructor-arg index="0" value="4"/>
         <constructor-arg index="1" ref="sedanPL"/>

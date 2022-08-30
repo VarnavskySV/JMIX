@@ -15,11 +15,6 @@ public class CarEventPublisher {
     @Autowired
     private ApplicationEventPublisher applicationEventPublisher;
 
-/*
-    public CarEventPublisher() {
-    }
-*/
-
     /**
      * Метод публикации сообщения.
      * @param message - текст.

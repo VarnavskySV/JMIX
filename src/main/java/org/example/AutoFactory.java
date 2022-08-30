@@ -1,6 +1,7 @@
 package org.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
@@ -13,11 +14,16 @@ public class AutoFactory {
     /**
      * Размерность производства.
      */
-    private final int size;
+    private int size;
     /**
      * Производственная линия.
      */
-    private final ProductionLine productionLine;
+    private ProductionLine productionLine;
+
+    @Autowired
+    public AutoFactory(@Qualifier("sedanPL") ProductionLine productionLine) {
+        this.productionLine = productionLine;
+    }
 
     /**
      * Конструктор
@@ -27,6 +33,14 @@ public class AutoFactory {
     public AutoFactory(int size, ProductionLine productionLine) {
         this.size = size;
         this.productionLine = productionLine;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 
     /**
